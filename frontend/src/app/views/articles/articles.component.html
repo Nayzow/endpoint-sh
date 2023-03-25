@@ -1,0 +1,20 @@
+<div *ngFor="let article of articles">
+  <div class="article">
+    <div class="presentation-article">
+      <h1 class="article-title">{{article.technology.name}}</h1>
+      <img class="logo-article" src="{{article.technology.image}}">
+    </div>
+
+    <p [innerHTML]="article.content"></p>
+    <img class="roadmap" src="{{article.technology.roadmap}}">
+
+    <!--Docker-->
+    <!--<iframe class="video" src="https://www.youtube.com/embed/caXHwYC3tq8" allowfullscreen></iframe>-->
+
+    <!--Kubernetes-->
+    <iframe class="video" src="https://www.youtube.com/embed/NChhdOZV4sY" allowfullscreen></iframe>
+
+    <!--Generic-->
+    <!--  <iframe class="video" src="https://www.youtube.com/embed/{{article.video}}" allowfullscreen></iframe>-->
+  </div>
+</div>

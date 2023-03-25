@@ -1,0 +1,17 @@
+<div *ngIf="isLoading">
+  <div class="loading">
+    <div class="spinner"></div>
+    <div>Chargement...</div>
+  </div>
+</div>
+
+<div [@technologiesAnimation]="technologies.length" *ngIf="!isLoading">
+  <div class="technologies">
+    <a [routerLink]="['/' + technologiesType + '/' + technology.name] " class="technology"
+       *ngFor="let technology of technologies">
+      <h2>{{ technology.name }}</h2>
+      <img src="{{ technology.image }}" width="200" height="200">
+      <h4>{{ technology.category.name }}</h4>
+    </a>
+  </div>
+</div>
