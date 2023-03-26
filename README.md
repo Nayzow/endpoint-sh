@@ -16,12 +16,12 @@ La configuration YAML pour le déploiement des services est également présent�
 
 ### Frontend :
 - Web App Angular (Typescript)
-- Github : https://github.com/Nayzow/endpoint-sh-frontend
+- Github : https://github.com/Nayzow/endpoint-sh/tree/main/frontend
 - Docker Hub : https://hub.docker.com/r/nayzow/endpoint-sh-frontend
 
 ### Backend :
 - Api Springboot (Java)
-- Github : https://github.com/Nayzow/endpoint-sh-backend
+- Github : https://github.com/Nayzow/endpoint-sh/tree/main/backend
 - Docker Hub : https://hub.docker.com/r/nayzow/endpoint-sh-backend
 
 ### Nginx :
@@ -40,15 +40,20 @@ nginx.conf
 
 ## Déploiement
 
-Le déploiement est configuré pour tourner en local. Pour déployer le projet il suffit de récupérer le fichier "docker-compose.yaml" avec le code ci-dessous :
+Le déploiement est configuré pour tourner en local. Pour déployer le projet, il suffit de récupérer le fichier "docker-compose.yaml" avec le code ci-dessous :
 
 ```yaml
 version: '3'
 services:
+  database:
+    image: nayzow/endpoint-sh-database
+    ports:
+      - "3306:3306"
+      
   api:
     image: nayzow/endpoint-sh-backend
     ports:
-      - "8888:8888"
+      - "8080:8080"
 
   app:
     image: nayzow/endpoint-sh-frontend
@@ -56,7 +61,7 @@ services:
       - "80:80"
 ```
 
-Lien du fichier de déploiement : https://github.com/Nayzow/domains-ph/blob/main/docker-compose.YAML
+Lien du fichier de déploiement : https://github.com/Nayzow/endpoint-sh/blob/main/docker-compose.yaml
 
 Et ensuite d'effectuer cette commande dans le répertoire courant du fichier "docker-compose.yaml" :
 
