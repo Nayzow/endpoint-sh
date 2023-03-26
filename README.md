@@ -24,17 +24,22 @@ La configuration YAML pour le déploiement des services est également présent�
 - Github : https://github.com/Nayzow/endpoint-sh/tree/main/backend
 - Docker Hub : https://hub.docker.com/r/nayzow/endpoint-sh-backend
 
-### Nginx :
+### Database :
+- Database MySQL
+- Docker Hub : 
+
+
+### Server :
 
 L'application web tourne sur un serveur nginx dont le proxy redirige les requêtes à l'url :
 
-```bash
+```
 /api
 ```
 
 Vers l'url de l'api définit dans le fichier de l'application web Angular :
 
-```bash
+```
 nginx.conf
 ```
 
@@ -88,7 +93,7 @@ export const environment = {
 
 Dans le fichier :
 
-```bash
+```
 src/environnements/environnement.ts 
 ```
 
@@ -97,5 +102,5 @@ src/environnements/environnement.ts
 Version de l'apm elastic pour superviser les containers :
 
 ```json
-"elastic-apm-node" : ^3.42.0
+"elastic-apm-node": "^3.43.0"
 ```

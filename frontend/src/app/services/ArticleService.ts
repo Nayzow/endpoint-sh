@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Article } from '../models/Article';
 import {Observable} from "rxjs";
 import {Command} from "../models/Command";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class ArticleService {
   constructor(private http: HttpClient) {}
 
   getAll(technologyName: string | null = null): Observable<Article[]> {
-    let url = 'http://localhost:8080/articles';
+    let url = environment.apiUrl + '/articles';
     if(technologyName) {
       url += '?technologyName=' + encodeURI(technologyName);
     }

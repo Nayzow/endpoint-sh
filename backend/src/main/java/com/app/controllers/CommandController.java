@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/commands")
+@RequestMapping("/api/commands")
 @CrossOrigin(origins = "http://localhost:4200")
 @RequiredArgsConstructor
 public class CommandController {

@@ -1,11 +1,7 @@
 # Endpoint.sh Frontend
 
-Frontend de l'API endpoint-sh-api disponible sur mon github : https://github.com/Nayzow/endpoint-sh-api
 L'application web est réalisée avec Angular et le langage TypeScript. Elle comporte plusieurs pages affichant des articles écris par mes soins et des vidéos sur diverses technologies.
-
-## Presentation
-
-![presentation.gif](resources%2Fimages%2Fscreenshots%2Fpresentation.gif)
+Elle permet également d'afficher des commandes utiles lors de l'usage de ces technologies.
 
 ## Routes de l'application
 
@@ -31,19 +27,13 @@ Les routes de l'application sont définies dans le fichier app-routing.module.ts
 
 Assurez-vous d'avoir Node.js et npm installés sur votre ordinateur. Vous pouvez vérifier leur installation en ouvrant une invite de commande et en tapant node -v et npm -v.
 
-#### 1. Clonez le dépôt du projet en utilisant la commande 
-
-```bash
-git clone https://github.com/Nayzow/endpoint-sh-frontend
-```
-
-#### 2. À la racine du projet, installez les dépendances en utilisant la commande 
+#### 1. À la racine du projet, installez les dépendances en utilisant la commande 
 
 ```bash
 npm install
 ```
 
-#### 3. Démarrez l'application en utilisant la commande 
+#### 2. Démarrez l'application en utilisant la commande 
 
 ```bash
 npm start

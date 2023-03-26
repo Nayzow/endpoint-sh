@@ -1,6 +1,9 @@
 FROM openjdk:17-jdk-alpine
-VOLUME /tmp
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+WORKDIR /app
+COPY pom.xml .
+RUN apk add --no-cache maven
+RUN mvn dependency:go-offline -B
+COPY . .
+RUN mvn package
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+CMD ["java", "-jar", "target/DocumentationApi-0.0.1-SNAPSHOT.jar"]

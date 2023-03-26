@@ -12,6 +12,20 @@ login : root
 password : test
 ```
 
+## Installation
+
+#### 1. Build l'image
+
+```bash
+docker build -t endpoint-sh-database .
+```
+
+#### 2. Lancer le container à partir de l'image
+
+```bash
+docker run --name endpoint-sh-database -p 3306:3306 -d endpoint-sh-database
+```
+
 ## UML
 
 ![img.png](resources/uml.png)
