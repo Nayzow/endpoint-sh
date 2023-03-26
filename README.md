@@ -26,8 +26,8 @@ La configuration YAML pour le déploiement des services est également présent�
 
 ### Database :
 - Database MySQL
-- Docker Hub : 
-
+- Github : https://github.com/Nayzow/endpoint-sh/tree/main/database
+- Docker Hub : https://hub.docker.com/r/nayzow/endpoint-sh-database
 
 ### Server :
 
