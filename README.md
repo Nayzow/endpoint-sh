@@ -76,7 +76,7 @@ docker-compose up
 
 L'application Web est désormais disponible à l'adresse http://localhost
 
-L'API est désormais disponible à l'adresse http://localhost:8888
+L'API est désormais disponible à l'adresse http://localhost:8080
 
 Vous pouvez également copier la configuration YAML dans la section custom stack sur Portainer ou sur un autre service d'orchéstration de containers.
 
