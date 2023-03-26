@@ -59,6 +59,8 @@ services:
     image: nayzow/endpoint-sh-backend
     ports:
       - "8080:8080"
+    depends_on:
+      - database
 
   app:
     image: nayzow/endpoint-sh-frontend
